@@ -61,7 +61,7 @@ import React, { Component } from "react";
 import { ReactMic } from "react-mic";
 import "./Recorder.css";
 
-class AudioRecorder extends Component {
+class Recorder extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -207,4 +207,4 @@ class AudioRecorder extends Component {
   }
 }
 
-export default AudioRecorder;
+export default Recorder;
