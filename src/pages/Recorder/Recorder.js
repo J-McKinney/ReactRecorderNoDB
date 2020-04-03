@@ -67,8 +67,10 @@ class Recorder extends Component {
     this.state = {
       downloadLinkURL: null,
       isRecording: false,
+      // these 2 go into the prototype
       recordingStarted: false,
       recordingStopped: false
+      // these 2 go into the prototype
     };
   }
 
@@ -102,8 +104,10 @@ class Recorder extends Component {
     this.setState({
       isRecording: true,
       recordingInSession: true,
+      // these 2 go into the prototype
       recordingStarted: true,
       recordingStopped: false,
+      // these 2 go into the prototype
       isPaused: false
     });
   };
@@ -123,16 +127,16 @@ class Recorder extends Component {
       // downloadLinkURL,
       isRecording,
       recordingInSession,
-      recordingStarted,
+      // recordingStarted,
       // recordingStopped
     } = this.state;
 
-    const recordBtn = recordingInSession
-      ? "fa disabled fa-record-vinyl fa-fw"
-      : "fa fa-record-vinyl fa-fw";
-    const stopBtn = !recordingStarted
-      ? "fa disabled fa-stop-circle"
-      : "fa fa-stop-circle";
+    // const recordBtn = recordingInSession
+    //   ? "fa disabled fa-record-vinyl fa-fw"
+    //   : "fa fa-record-vinyl fa-fw";
+    // const stopBtn = !recordingStarted
+    //   ? "fa disabled fa-stop-circle"
+    //   : "fa fa-stop-circle";
     // const downloadLink = recordingStopped
     //   ? "fa fa-download"
     //   : "fa disabled fa-download";
@@ -162,7 +166,8 @@ class Recorder extends Component {
               <div id="oscilloscope-scrim">
                 {!recordingInSession && <div id="scrim" />}
               </div>
-              <div id="controls">
+
+              {/*<div id="controls">
                 <div className="column active">
                   <i
                     onClick={this.startRecording}
@@ -178,13 +183,14 @@ class Recorder extends Component {
                   />
                 </div>
                 <div className="column download">
-                  {/*<a
+                  <a
                     className={downloadLink}
                     href={downloadLinkURL}
                     download={`recording.webm`}
-                  />*/}
+                  />
                 </div>
-              </div>
+              </div>*/}
+
             </div>
             <div id="audio-playback-controls">
               <audio
